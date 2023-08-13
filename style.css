@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+
+/* General Style */
+body {
+        font-family: 'Source Code Pro', monospace;
+        color: #d5dbe3;
+        background-color: #021627;
+        cursor: url('./media/point.png'), auto;
+        max-width: 700px;
+        margin-left: 20px;
+        padding-bottom: 10px;
+}
+
+p {
+        line-height: 1.7;
+}
+
+/* H1 Typewriter Animation */
+.typewriter h1 {
+        font-family: 'Press Start 2P', sans-serif;
+        font-weight: 900;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: left auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: typing 3s steps(50, end);
+}
+
+@keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+}
+
+/* Hoverable Card Pop-ups */
+.pronouns {
+        color: #fde37b;
+        text-decoration: none;
+        border-bottom: 1px dashed #fde37b;
+        
+}
+.pronouns:hover {
+        color:#fff !important;
+        font-weight: 600;
+        background-color: rgb(253, 227, 123, 0.3) !important;
+        text-decoration: none;
+        border-bottom: 0px;
+        cursor: url('./media/click.png'), auto;
+}
+
+/* Specific Font Colors */
+h3 {
+        color: #00bef6;
+        font-weight: 600;
+}
+.resume {
+        color: #e96ef6;
+        font-weight: 600;
+}
+.resume:hover {
+        color:#fff !important;
+        background-color: rgb(233, 110, 246, 0.3) !important;
+        text-decoration: none;
+        cursor: url('./media/click.png'), auto;
+}
+.experience-links {
+        color: #f99853;
+        font-weight: 600;
+}
+.experience-links:hover {
+        color:#fff !important;
+        background-color: rgb(249, 152, 83, 0.3) !important;
+        text-decoration: none;
+        cursor: url('./media/click.png'), auto;
+}
+.contact-links {
+        color: #8de493;
+        font-weight: 600;
+}
+.contact-links:hover {
+        color:#fff !important;
+        background-color: rgb(141, 228, 147, 0.3) !important;
+        text-decoration: none;
+        cursor: url('./media/click.png'), auto;
+}

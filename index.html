@@ -1,32 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
-<style>
-        body {
-                background-color: rgb(15, 17, 26);
-                color: white;
-                font-family: 'Courier New', Courier, monospace;
-                cursor: url('./media/point.png'), auto;
-        }
-        a:link {
-                color: rgb(194, 231, 141);
-                font-weight: 600;
-                text-decoration: none;
-        }
-        a:visited {
-                color: rgb(194, 231, 141);
-                font-weight: 600;
-                text-decoration: none;
-        }
-        a:hover {
-                font-weight: 600;
-                background-color: rgb(194, 231, 141, 0.3) !important;
-                color:#fff !important;
-                text-decoration: none;
-                cursor: url('./media/click.png'), auto;
-        }
-</style>
-
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,19 +10,26 @@
 </head>
 
 <body>
-        <h1>jiyoon's site</h1>
+        <div class="typewriter">
+                <h1>jiyoon's site</h1>
+        </div>
         <div id="who-am-i">
                 <h3>who am i?</h3>
-                <p>Greetings, my name is Jiyoon (pronounced jee-yoon).<br>
-                My pronouns are she/her/hers and I'm currently a<br>
-                third-year Computer Science major at Tufts University<br>
-                from the Greater Boston Area. Welcome to my website! :)</p>
+                <p>Greetings, my name is Jiyoon 
+                <i>(pronounced jee-yoon)</i>.
+                My pronouns are 
+                <a href="https://pronouns.org/what-and-why" target="_blank" class="pronouns" data-tooltip="why pronouns matter">she/her/hers</a>
+                and I'm currently a
+                third-year Computer Science major at Tufts University
+                from the Greater Boston Area. Welcome to my website! :)
         </div>
         <br>
         <div id="why-make-this">
                 <h3>why did i make this?</h3>
-                <p>This is a way for anybody to get to know more about<br>
-                me and what I like to create.</p>
+                <p>This is a way for anybody to get to know more about
+                me and what I like to create. I'm super excited about 
+                developing interesting projects for fun and displaying
+                them here!</p>
         </div>
         <br>
         <div id="what-experience">
@@ -59,22 +41,22 @@
                 <ul>
                         <li>C, C++, Java, Python, HTML/CSS (since 2017)</li>
                         <li>Interned at
-                                <a href="https://www.oracle.com/" target="_blank">Oracle Cloud Infrastructure</a> 
+                                <a href="https://www.oracle.com/" target="_blank" class="experience-links">Oracle Cloud Infrastructure</a> 
                                 (summer 2023)
                         </li>
                         <li>
                                 President of  
-                                <a href="https://sites.tufts.edu/tuftsswe/" target="_blank">Tufts Society of Women Engineers</a> 
+                                <a href="https://sites.tufts.edu/tuftsswe/" target="_blank" class="experience-links">Tufts Society of Women Engineers</a> 
                                 (2023-present)
                         </li>
                         <li>
                                 Branding & Hacker Experience Director of 
-                                <a href="https://metrohacks.org/index.html" target="_blank">MetroHacks</a> 
+                                <a href="https://metrohacks.org/index.html" target="_blank" class="experience-links">MetroHacks</a> 
                                 (2019-2021)
                         </li>
                         <li>
                                 Youth Engagement Advisor for the
-                                <a href="https://www.instagram.com/mfateens/" target="_blank">Museum of Fine Arts</a> 
+                                <a href="https://www.instagram.com/mfateens/" target="_blank" class="experience-links">Museum of Fine Arts</a> 
                                 (2019-2021)
                         </li>
                 </ul>
@@ -84,10 +66,10 @@
                 <h3>how to get in touch?</h3>
                 <ul>
                         <li>
-                                <a href="mailto:jiyoon.choi@tufts.edu">jiyoon.choi@tufts.edu</a>
+                                <a href="mailto:jiyoon.choi@tufts.edu" class="contact-links">jiyoon.choi@tufts.edu</a>
                         </li>
                         <li>
-                                <a href="https://www.linkedin.com/in/choi-jiyoon/" target="_blank">Linkedin</a> 
+                                <a href="https://www.linkedin.com/in/choi-jiyoon/" target="_blank" class="contact-links">Linkedin</a> 
                         </li>
                 </ul>
         </div>
