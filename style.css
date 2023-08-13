@@ -3,12 +3,14 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 /* General Style */
-body {
-        font-family: 'Source Code Pro', monospace;
+* {
         color: #d5dbe3;
         background-color: #021627;
         cursor: url('./media/point.png'), auto;
+}
+body {
         position: relative;
+        font-family: 'Source Code Pro', monospace;
         max-width: 700px;
         margin-left: 20px;
         padding-bottom: 10px;
