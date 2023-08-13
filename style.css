@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 /* General Style */
 body {
@@ -10,6 +8,7 @@ body {
         color: #d5dbe3;
         background-color: #021627;
         cursor: url('./media/point.png'), auto;
+        position: relative;
         max-width: 700px;
         margin-left: 20px;
         padding-bottom: 10px;
@@ -27,7 +26,7 @@ p {
         white-space: nowrap; /* Keeps the content on a single line */
         margin: left auto; /* Gives that scrolling effect as the typing happens */
         letter-spacing: .15em; /* Adjust as needed */
-        animation: typing 3s steps(50, end);
+        animation: typing 2s steps(50, end);
 }
 
 @keyframes typing {
@@ -35,14 +34,30 @@ p {
         to { width: 100% }
 }
 
+.effect-shine h1:hover {
+        -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+        -webkit-mask-size: 200%;
+        animation: shine 2s infinite;
+}
+
+@keyframes shine {
+        from { -webkit-mask-position: 150%;}
+        to { -webkit-mask-position: -50%; }
+}
+
 /* Hoverable Card Pop-ups */
-.pronouns {
+
+/* tooltip container */
+.con-tooltip {
+        display: inline-block;
+        position: relative;
         color: #fde37b;
         text-decoration: none;
-        border-bottom: 1px dashed #fde37b;
-        
+        border-bottom: 1px dashed #fde37b;        
+        transition: all 0.3s ease-in-out;
 }
-.pronouns:hover {
+
+.con-tooltip:hover {
         color:#fff !important;
         font-weight: 600;
         background-color: rgb(253, 227, 123, 0.3) !important;
@@ -51,38 +66,133 @@ p {
         cursor: url('./media/click.png'), auto;
 }
 
+/* tooltip */
+.tooltip {
+        visibility: hidden;
+        z-index: 1;
+        opacity: .40;
+        width: 280%;
+        text-align: center;
+        padding: 5px;
+        background: #23303b;
+        color: #E086D3;
+        font-weight: 600;
+        position: absolute;
+        border-radius: 9px;
+        font: 16px;
+        transform: translateY(9px);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
+}
+
+/* tooltip after */
+.tooltip::after {
+        content: " ";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12px 12.5px 0 12.5px;
+        border-color: #333 transparent transparent transparent;
+        position: absolute;
+        left: 40%;
+}
+
+.con-tooltip:hover .tooltip{
+        visibility: visible;
+        transform: translateY(-10px);
+        opacity: 1;
+        transition: .3s linear;
+        animation: odsoky 1s ease-in-out infinite alternate;
+        cursor: url('./media/click.png'), auto;
+}
+
+/* animation */
+@keyframes odsoky {
+0%{
+        transform: translateY(3px); 
+}
+
+100%{
+        transform: translateY(1px); 
+}
+
+}
+
+/* hover ToolTip */
+.top:hover {
+        transform: translateY(-6px);  
+}
+
+/* top placement */
+.top .tooltip { 
+        top:-200%; 
+        left:-5%; 
+}
+
+.top .tooltip::after{
+        top:100%;
+        left:15%;
+}
+
+      
 /* Specific Font Colors */
 h3 {
         color: #00bef6;
         font-weight: 600;
 }
+.github {
+        display: inline-block;
+        color: #f06dff;
+        font-weight: 600;  
+        transition: all 0.3s ease-in-out;
+}
+.github:hover {
+        color:#fff !important;
+        background-color: rgb(240, 109, 255, 0.3) !important;
+        text-decoration: none;
+        cursor: url('./media/click.png'), auto;
+        transform: translateY(-2px);  
+        transition: all 0.3s ease-in-out;
+}
 .resume {
-        color: #e96ef6;
-        font-weight: 600;
+        display: inline-block;
+        color: #b775ff;
+        font-weight: 600;  
+        transition: all 0.3s ease-in-out;
 }
 .resume:hover {
         color:#fff !important;
         background-color: rgb(233, 110, 246, 0.3) !important;
         text-decoration: none;
         cursor: url('./media/click.png'), auto;
+        transform: translateY(-2px);  
+        transition: all 0.3s ease-in-out;
 }
 .experience-links {
+        display: inline-block;
         color: #f99853;
         font-weight: 600;
+        transition: all 0.3s ease-in-out;
 }
 .experience-links:hover {
         color:#fff !important;
         background-color: rgb(249, 152, 83, 0.3) !important;
         text-decoration: none;
         cursor: url('./media/click.png'), auto;
+        transform: translateY(-2px);  
+        transition: all 0.3s ease-in-out;
 }
 .contact-links {
+        display: inline-block;
         color: #8de493;
         font-weight: 600;
+        transition: all 0.3s ease-in-out;
 }
 .contact-links:hover {
         color:#fff !important;
         background-color: rgb(141, 228, 147, 0.3) !important;
         text-decoration: none;
         cursor: url('./media/click.png'), auto;
+        transform: translateY(-2px);  
+        transition: all 0.3s ease-in-out;
 }
