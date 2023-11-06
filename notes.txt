@@ -6,7 +6,6 @@ overall
 - playful background
 - create an old school feeling
 - very hover-interactive
-- allow user to select background color
 
 who am i
 - hover to see name pronunciation
